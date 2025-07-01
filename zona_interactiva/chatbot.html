@@ -96,29 +96,33 @@
       font-weight: 500;
       text-align: left;
     }
-    /* Listas y párrafos igual que el chat, pero letra negra */
-    .ul, ol {
-      padding-left: 5px;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  .li, p {
-  font-size: 1.00em;  /* Igual que .user y .bot */
-  line-height: 1.4;
-  font-weight: 500;
-  color: #385c6e;
-  margin-bottom: 10px;
+  /* Estilos solo para los mensajes del chat (bot, user, bot1) */
+.bot li, .bot ul, .bot ol, .bot p,
+.bot1 li, .bot1 ul, .bot1 ol, .bot1 p,
+.user li, .user ul, .user ol, .user p {
+  font-size: 1em;
+  line-height: 1.27;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-  max-width: 98%;
+  color: #385c6e;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
   box-sizing: border-box;
   padding-right: 12px;
-  text-align: left;
+  max-width: 98%;
 }
-
-    .ul li:last-child,
-   .p:last-child {
-      margin-bottom: 0;
-    }
+.bot ul, .bot ol,
+.bot1 ul, .bot1 ol,
+.user ul, .user ol {
+  padding-left: 22px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.bot li:last-child, .bot p:last-child,
+.bot1 li:last-child, .bot1 p:last-child,
+.user li:last-child, .user p:last-child {
+  margin-bottom: 0;
+}
     .input-container {
       display: flex;
       gap: 10px;
