@@ -72,6 +72,21 @@
       max-width: 98%;
       box-sizing: border-box;
     }
+    .user, .bot, .bot1,
+.user *, .bot *, .bot1 * {
+  font-size: 1em !important;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+  line-height: 1.27 !important;
+  font-weight: 500 !important;
+  color: #385c6e !important;
+  text-align: left !important;
+}
+
+/* Esto es clave para que el <b> y <strong> NO agranden la letra */
+.bot b, .bot strong, .bot1 b, .bot1 strong, .user b, .user strong {
+  font-size: 1em !important;
+  font-weight: 700 !important; /* Opcional: solo si quieres resaltar la negrita, pero sin agrandar */
+}
     .user {
       text-align: left;
       color: #0c3277;
