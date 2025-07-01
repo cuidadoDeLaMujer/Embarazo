@@ -19,6 +19,7 @@
       color: #333;
       margin: 0;
       padding: 0;
+      font-size: 15px;
     }
     header {
       background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
@@ -56,45 +57,65 @@
       border-radius: 15px;
       background: #f8f6fd;
       margin-bottom: 22px;
-      font-size: 1.00rem;
+      font-size: 1.00em;
       color: #385c6e;
       font-weight: 500;
     }
-    .user, .bot {
-      margin-bottom: 12px;
-      line-height: 1.4;
+    /* Mensajes del chat */
+    .user, .bot, .bot1 {
+      font-size: 0.97em;
+      line-height: 1.27;
+      font-weight: 500;
+      padding: 7px 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      max-width: 98%;
+      box-sizing: border-box;
     }
     .user {
       text-align: left;
       color: #0c3277;
-      font-weight: 600;
       background: #d5dffc;
       display: inline-block;
-      max-width: 100%;
-      min-width: 300px;
-      padding: 8px 16px 8px 15px;
-      border-radius: 15px;
-      margin-bottom: 12px;
+      min-width: 140px;
+      margin-bottom: 10px;
       margin-top: 8px;
-      box-sizing: border-box;
-      font-size: 1.00rem;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    }
-    .bot1 {
-      text-align: left;
-      text-align: justify;
-      color: #385c6e;
-      padding: 7px 16px;
-      word-break: break-word;
     }
     .bot {
       text-align: left;
-      color:#385c6e;
-      padding: 7px 16px;
+      color: #385c6e;
+      background: #fff;
       margin-left: 5%;
       word-break: break-word;
       text-align: justify;
-      font-size: 1.00rem;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    .bot1 {
+      background: #e7e9fd;
+      color: #225ece;
+      font-style: italic;
+      font-weight: 500;
+      text-align: left;
+    }
+    /* Listas y párrafos como en secciones informativas */
+    ul, ol {
+      padding-left: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    li, p {
+      font-size: 1.00em;
+      line-height: 1.6;
+      color: #385c6e;
+      margin-bottom: 3px;
+      text-align: justify;
+      max-width: 130ch;
+      padding-right: 12px;
+    }
+    ul li:last-child,
+    p:last-child {
+      margin-bottom: 0;
     }
     .input-container {
       display: flex;
@@ -107,7 +128,7 @@
       padding: 12px 14px;
       border: 1.5px solid var(--rosa-bebe);
       border-radius: 15px;
-      font-size: 1.00rem;
+      font-size: 1.00em;
       font-weight: 500;
       outline: none;
       background: #fdf6fa;
@@ -123,10 +144,10 @@
       background:#f291b3;
       color: #000000;
       border: none;
-      padding: 12px 28px;
-      border-radius: 15px;
-      font-weight: 700;
-      font-size: 1.2rem;
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05em;
       cursor: pointer;
       box-shadow: 0 3px 10px rgba(194, 24, 91, 0.3);
       transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
@@ -188,25 +209,21 @@
       transform: translateY(0) scale(1);
       box-shadow: 0 2px 8px rgba(255,127,80,0.14);
     }
-
-    /* ESTILO DE LISTAS Y PARRAFOS COMO EN SEGUNDO TRIMESTRE */
-    ul, ol {
-      padding-left: 22px;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    li, p {
-      font-size: 1.00em;
-      line-height: 1.6;
-      color: #385c6e;
-      margin-bottom: 3px;
-      text-align: justify;
-      max-width: 130ch;
-      padding-right: 12px;
-    }
-    ul li:last-child,
-    p:last-child {
-      margin-bottom: 0;
+    @media (max-width: 600px) {
+      main {
+        padding: 0 5px;
+      }
+      .chat-box {
+        font-size: 0.95em;
+        height: 280px;
+      }
+      .user, .bot, .bot1 {
+        font-size: 0.95em;
+        padding: 6px 8px;
+      }
+      input[type="text"] {
+        font-size: 0.98em;
+      }
     }
   </style>
 </head>
@@ -411,7 +428,6 @@ const KNOWLEDGE = [
 const OUT_OF_SCOPE = [
   /cancer|mama|seno|inteligencia artificial|tecnolog|politic|futbol|clima|presidente|perro|gato|musica|pais|historia|matematic|gpt|openai|modelo|red neuronal|quimica|covid|influenza|diabetes|corazon|riñon|pulmon|computadora|celular|telefono|juego|pelicula|actor|artista|viaje|vacacion|universidad|trabajo|dinero|criptomoneda|bitcoin|cocina|receta/i
 ];
-
     function appendMessage(message, sender) {
       const div = document.createElement('div');
       div.className = sender;
@@ -419,11 +435,9 @@ const OUT_OF_SCOPE = [
       chatBox.appendChild(div);
       chatBox.scrollTop = chatBox.scrollHeight;
     }
-
     function sendMessage() {
       let text = userInput.value.trim();
       if (text === "") return;
-
       appendMessage(text, 'user');
       userInput.value = "";
       userInput.disabled = true;
@@ -434,7 +448,6 @@ const OUT_OF_SCOPE = [
         userInput.focus();
       }, 900);
     }
-
     function getBotResponse(input) {
       // Primero, si detecta palabras fuera de tema, rechaza la pregunta
       for (let out of OUT_OF_SCOPE) {
@@ -460,7 +473,6 @@ const OUT_OF_SCOPE = [
       • Controles médicos<br>
       • Preparación para el parto, entre otros.</i>`;
     }
-
     userInput.addEventListener("keydown", function(e) {
       if (e.key === "Enter") {
         sendMessage();
