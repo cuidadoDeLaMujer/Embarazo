@@ -85,34 +85,35 @@
     .bot {
       text-align: left;
       color: #385c6e;
+      background: #fff;
       margin-left: 5%;
-      font-size: 1.00em;
-      font-weight: 500;
       word-break: break-word;
       text-align: justify;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     }
     .bot1 {
+      background: #e7e9fd;
       color: #225ece;
       font-style: italic;
       font-weight: 500;
       text-align: left;
-      font-size: 1.00em;
     }
-    /* Listas y párrafos como en secciones informativas */
+    /* Listas y párrafos igual que el chat, pero letra negra */
     ul, ol {
       padding-left: 22px;
       margin-top: 0;
       margin-bottom: 0;
     }
     li, p {
-      font-size: 1.00em;
-      line-height: 1.6;
-      color: #385c6e;
-      margin-bottom: 3px;
-      text-align: justify;
+      font-size: 0.97em;
+      line-height: 1.27;
       font-weight: 500;
-      max-width: 130ch;
+      color: #222; /* negro */
+      margin-bottom: 10px;
+      text-align: justify;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      max-width: 98%;
+      box-sizing: border-box;
       padding-right: 12px;
     }
     ul li:last-child,
@@ -221,6 +222,10 @@
       .user, .bot, .bot1 {
         font-size: 0.95em;
         padding: 6px 8px;
+      }
+      li, p {
+        font-size: 0.95em;
+        padding-right: 6px;
       }
       input[type="text"] {
         font-size: 0.98em;
