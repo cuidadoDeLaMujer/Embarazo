@@ -44,13 +44,12 @@
       letter-spacing: .2px;
     }
     main {
-      max-width: 900px;
+      max-width: 850px;
       margin: 40px auto 60px;
       padding: 0 20px;
     }
     .chat-box {
-
-      height: 340px;
+      height: 500px;
       overflow-y: auto;
       border: 1.5px solid var(--celeste-bebe);
       padding: 15px;
@@ -65,23 +64,22 @@
       margin-bottom: 12px;
       line-height: 1.4;
     }
-    
-.user {
-  text-align: left;
-  color: #0c3277;
-  font-weight: 600;
-  background: #d5dffc;
-  display: inline-block;
-  max-width: 100%;
-  min-width: 300px;
-  padding: 8px 16px 8px 15px;
-  border-radius: 15px;
-  margin-bottom: 12px;
-  margin-top: 8px;
-  box-sizing: border-box;
-  font-size: 1.00rem;
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-}
+    .user {
+      text-align: left;
+      color: #0c3277;
+      font-weight: 600;
+      background: #d5dffc;
+      display: inline-block;
+      max-width: 100%;
+      min-width: 300px;
+      padding: 8px 16px 8px 15px;
+      border-radius: 15px;
+      margin-bottom: 12px;
+      margin-top: 8px;
+      box-sizing: border-box;
+      font-size: 1.00rem;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
     .bot1 {
       text-align: left;
       text-align: justify;
@@ -90,15 +88,14 @@
       word-break: break-word;
     }
     .bot {
-  text-align: left;
-  color:#385c6e;
-  padding: 7px 16px;
-  margin-left: 5%;
-  word-break: break-word;
-  text-align: justify;
-  font-size: 1.00rem;
-}
-
+      text-align: left;
+      color:#385c6e;
+      padding: 7px 16px;
+      margin-left: 5%;
+      word-break: break-word;
+      text-align: justify;
+      font-size: 1.00rem;
+    }
     .input-container {
       display: flex;
       gap: 10px;
@@ -144,72 +141,73 @@
       box-shadow: 0 7px 22px rgba(255,127,80,0.22);
       transform: translateY(-2px) scale(1.04);
     }
-   
-     .button-container {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .cta-button {
-            padding: 12px 73px;
-            align-self: center;
-            width: auto;
-            min-width: 0;
-            background:#d5dffc;
-            color: #0c3277; 
-            border: none;
-            border-radius: 22px;
-            font-size: 1.06em;
-            font-weight: 720;
-            cursor: pointer;
-            transition: all 0.28s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 1px;
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta-button {
+      padding: 12px 73px;
+      align-self: center;
+      width: auto;
+      min-width: 0;
+      background:#d5dffc;
+      color: #0c3277;
+      border: none;
+      border-radius: 22px;
+      font-size: 1.06em;
+      font-weight: 720;
+      cursor: pointer;
+      transition: all 0.28s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1px;
       margin-top: 1px;
-        }
-        ul, ol {
-    padding-left: 20px;
-    margin-top: 0; 
-    margin-bottom: 0;
-}
-li, p {
-    font-size: 1.00em;
-    line-height: 1.5;
-    color: #385c6e;
-    margin-bottom: 0.5px;    /* Antes era 3px, ahora menos espacio */
-    text-align: justify;
-    max-width: 130ch;
-    padding-right: 12px;
-}
-ul li:last-child,
-p:last-child {
-    margin-bottom: 0;
-}
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: rgba(255,255,255,0.21);
-            transform: skewX(-20deg);
-            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
-        }
-        .cta-button:hover::before {
-            left: 100%;
-        }
-        .cta-button:hover {
-            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
-            color: #4e0121;
-            transform: translateY(-2.5px) scale(1.03);
-            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
-        }
-        .cta-button:active {
-            transform: translateY(0) scale(1);
-            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
-        }
+    }
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: rgba(255,255,255,0.21);
+      transform: skewX(-20deg);
+      transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+    }
+    .cta-button:hover::before {
+      left: 100%;
+    }
+    .cta-button:hover {
+      background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+      color: #4e0121;
+      transform: translateY(-2.5px) scale(1.03);
+      box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+    }
+    .cta-button:active {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+    }
+
+    /* ESTILO DE LISTAS Y PARRAFOS COMO EN SEGUNDO TRIMESTRE */
+    ul, ol {
+      padding-left: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    li, p {
+      font-size: 1.00em;
+      line-height: 1.6;
+      color: #385c6e;
+      margin-bottom: 3px;
+      text-align: justify;
+      max-width: 130ch;
+      padding-right: 12px;
+    }
+    ul li:last-child,
+    p:last-child {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
@@ -247,7 +245,8 @@ const KNOWLEDGE = [
   <li>Cansancio o sueño excesivo</li>
   <li>Ganas frecuentes de orinar</li>
   <li>Cambios de humor</li>
-  <li>La forma más confiable de confirmarlo es un test de embarazo en orina o sangre</li>.</ul>`
+  <li>La forma más confiable de confirmarlo es un test de embarazo en orina o sangre</li>
+</ul>`
   },
   {
     keywords: [/prevencion/i, /prevenir/i, /cuidado/i, /consejo/i, /evitar/i, /recomendacion/i],
@@ -281,7 +280,8 @@ const KNOWLEDGE = [
   <li>Análisis de sangre y orina</li>
   <li>Medición de peso, presión arterial y altura uterina</li>
   <li>Consejos sobre alimentación y actividad física</li>
-  <li>Es importante no saltarse las consultas, ¡incluso si te sientes bien!</li> </ul>`
+  <li>Es importante no saltarse las consultas, ¡incluso si te sientes bien!</li>
+</ul>`
   },
   {
     keywords: [/ejercicio/i, /actividad fisica/i, /deporte/i, /caminar/i, /yoga/i],
@@ -291,7 +291,8 @@ const KNOWLEDGE = [
   <li>Yoga prenatal</li>
   <li>Natación</li>
   <li>Estiramientos suaves</li>
-  <li>Evita deportes de contacto o alto impacto.</li></ul>`
+  <li>Evita deportes de contacto o alto impacto.</li>
+</ul>`
   },
   {
     keywords: [/medicina|medicamento|pastilla|remedio|paracetamol|ibuprofeno|farmaco|automedica/i],
@@ -315,7 +316,8 @@ const KNOWLEDGE = [
   <li>Pérdida del tapón mucoso</li>
   <li>Rotura de bolsa (salida de líquido)</li>
   <li>Dolor lumbar persistente</li>
-<li>Prepara tu bolso con tiempo y ten a mano los números de emergencia y de tu centro de salud.</li></ul>`
+  <li>Prepara tu bolso con tiempo y ten a mano los números de emergencia y de tu centro de salud.</li>
+</ul>`
   },
   {
     keywords: [/semana/i, /trimestre/i, /mes/i, /cuanto dura/i, /cuantas semanas/i, /etapa/i],
@@ -336,65 +338,63 @@ const KNOWLEDGE = [
   <li>Los controles permiten monitorear su salud y crecimiento</li>
 </ul>`
   },
-
   {
-  keywords: [/complicacion|preeclampsia|diabetes gestacional|sangrado|riesgo/i],
-  answer: `Algunas complicaciones del embarazo pueden requerir atención médica inmediata:
+    keywords: [/complicacion|preeclampsia|diabetes gestacional|sangrado|riesgo/i],
+    answer: `Algunas complicaciones del embarazo pueden requerir atención médica inmediata:
 <ul>
   <li><b>Preeclampsia:</b> presión alta, hinchazón y proteínas en la orina.</li>
   <li><b>Diabetes gestacional:</b> niveles altos de azúcar durante el embarazo.</li>
   <li><b>Infecciones urinarias:</b> frecuentes en el embarazo, deben tratarse para evitar riesgos.</li>
   <li><b>Sangrado vaginal:</b>Consulta si ocurre, especialmente en el segundo o tercer trimestre.</li>
 </ul>`
-},
-{
-  keywords: [/sangrado|flujo|perdida|liquido|tapón mucoso|romper fuente/i],
-  answer: `Durante el embarazo, algunos flujos pueden ser normales, pero otros no. Atención a:
+  },
+  {
+    keywords: [/sangrado|flujo|perdida|liquido|tapón mucoso|romper fuente/i],
+    answer: `Durante el embarazo, algunos flujos pueden ser normales, pero otros no. Atención a:
 <ul>
   <li><b>Sangrado vaginal:</b> puede indicar amenaza de aborto, placenta previa u otras complicaciones.</li>
   <li><b>Pérdida de líquido transparente:</b> podría ser ruptura de la bolsa (romper fuente).</li>
   <li><b>Tapón mucoso:</b> secreción espesa y a veces con sangre. Es normal al acercarse el parto.</li>
 </ul>`
-},
-{
-  keywords: [/sexo|relacion|intimidad|sexualidad|coito/i],
-  answer: `En general, tener relaciones sexuales durante el embarazo es seguro, salvo que el médico indique lo contrario.
+  },
+  {
+    keywords: [/sexo|relacion|intimidad|sexualidad|coito/i],
+    answer: `En general, tener relaciones sexuales durante el embarazo es seguro, salvo que el médico indique lo contrario.
 <ul>
   <li>Evita si hay sangrados, contracciones, placenta previa o riesgo de parto prematuro.</li>
   <li>Usa posturas cómodas y suaves, especialmente en el tercer trimestre.</li>
   <li>La comunicación en pareja es importante para sentirse cómodos y seguros.</li>
 </ul>`
-},
-{
-  keywords: [/lactancia|amamantar|dar de mamar|leche materna/i],
-  answer: `La lactancia materna es el alimento ideal para el recién nacido. Beneficios:
+  },
+  {
+    keywords: [/lactancia|amamantar|dar de mamar|leche materna/i],
+    answer: `La lactancia materna es el alimento ideal para el recién nacido. Beneficios:
 <ul>
   <li>Proporciona todos los nutrientes que el bebé necesita.</li>
   <li>Refuerza el sistema inmune.</li>
   <li>Favorece el vínculo madre-bebé.</li>
   <li>Ayuda a la recuperación postparto (contracción del útero).</li>
 </ul>`
-},
-{
-  keywords: [/vacuna|vacunacion|inmunizacion|tos ferina|influenza|covid/i],
-  answer: `Durante el embarazo, hay vacunas recomendadas para protegerte a ti y al bebé:
+  },
+  {
+    keywords: [/vacuna|vacunacion|inmunizacion|tos ferina|influenza|covid/i],
+    answer: `Durante el embarazo, hay vacunas recomendadas para protegerte a ti y al bebé:
 <ul>
   <li><b>Tétano, difteria y tos ferina (Tdap):</b> entre las semanas 27 y 36.</li>
   <li><b>Influenza (gripe):</b> en cualquier trimestre.</li>
   <li><b>COVID-19:</b> si estás en riesgo o no has completado el esquema, consulta con tu médico.</li>
 </ul>`
-},
-{
-  keywords: [/trabajo|descanso|licencia|esfuerzo|recomienda trabajar/i],
-  answer: `Si tu embarazo transcurre normalmente, puedes seguir trabajando con algunas recomendaciones:
+  },
+  {
+    keywords: [/trabajo|descanso|licencia|esfuerzo|recomienda trabajar/i],
+    answer: `Si tu embarazo transcurre normalmente, puedes seguir trabajando con algunas recomendaciones:
 <ul>
   <li>Evita levantar peso o permanecer mucho tiempo de pie o sentada.</li>
   <li>Haz pausas para caminar o estirar las piernas.</li>
   <li>Prioriza el descanso y el sueño reparador.</li>
   <li>En Perú, la licencia por maternidad dura 98 días: 49 antes y 49 después del parto.</li>
 </ul>`
-},
-
+  },
   {
     keywords: [/hola|saludo|buenas/i],
     answer: `¡Hola! ¿En qué puedo ayudarte sobre embarazo, cuidados, síntomas o alimentación?`
@@ -407,7 +407,6 @@ const KNOWLEDGE = [
     keywords: [/adios|chau|hasta luego|nos vemos/i],
     answer: `¡Hasta luego! Recuerda que puedes volver cuando lo necesites. Tu bienestar es lo más importante.`
   }
-  
 ];
 const OUT_OF_SCOPE = [
   /cancer|mama|seno|inteligencia artificial|tecnolog|politic|futbol|clima|presidente|perro|gato|musica|pais|historia|matematic|gpt|openai|modelo|red neuronal|quimica|covid|influenza|diabetes|corazon|riñon|pulmon|computadora|celular|telefono|juego|pelicula|actor|artista|viaje|vacacion|universidad|trabajo|dinero|criptomoneda|bitcoin|cocina|receta/i
