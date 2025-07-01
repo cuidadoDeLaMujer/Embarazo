@@ -55,7 +55,7 @@
       border: 1.5px solid var(--celeste-bebe);
       padding: 15px;
       border-radius: 15px;
-      background: #f8f6fd;
+      background: #f1f5ff;
       margin-bottom: 22px;
       font-size: 1.00em;
       color: #385c6e;
@@ -63,7 +63,7 @@
     }
     /* Mensajes del chat */
     .user, .bot, .bot1 {
-      font-size: 0.97em;
+      font-size: 1.00em;
       line-height: 1.27;
       font-weight: 500;
       padding: 7px 12px;
@@ -85,14 +85,12 @@
     .bot {
       text-align: left;
       color: #385c6e;
-      background: #fff;
       margin-left: 5%;
       word-break: break-word;
       text-align: justify;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     }
     .bot1 {
-      background: #e7e9fd;
       color: #225ece;
       font-style: italic;
       font-weight: 500;
@@ -108,13 +106,13 @@
       font-size: 0.97em;
       line-height: 1.27;
       font-weight: 500;
-      color: #222; /* negro */
+      color: #385c6e;
       margin-bottom: 10px;
-      text-align: justify;
       font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
       max-width: 98%;
       box-sizing: border-box;
       padding-right: 12px;
+      text-align: left;
     }
     ul li:last-child,
     p:last-child {
@@ -471,8 +469,7 @@ const OUT_OF_SCOPE = [
         }
       }
       // Si no encuentra respuesta, intenta ser humana
-      return `No tengo información precisa sobre esa consulta.
-      Puedo ayudarte con preguntas sobre:
+      return `No tengo información precisa sobre esa consulta. Puedo ayudarte con preguntas sobre:
       <p>• Síntomas<br>
       • Etapas y semanas<br>
       • Alimentación<br>
