@@ -97,14 +97,14 @@
       text-align: left;
     }
     /* Listas y párrafos igual que el chat, pero letra negra */
-    ul, ol {
-  padding-left: 22px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-li, p {
-  font-size: 1.00em;
-  line-height: 1.27;
+    .ul, ol {
+      padding-left: 5px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  .li, p {
+  font-size: 1.00em;  /* Igual que .user y .bot */
+  line-height: 1.4;
   font-weight: 500;
   color: #385c6e;
   margin-bottom: 10px;
@@ -114,21 +114,11 @@ li, p {
   padding-right: 12px;
   text-align: left;
 }
-ul li:last-child,
-p:last-child {
-  margin-bottom: 0;
-}
 
-/* Fuerza todo en mensajes del chat */
-.user, .bot, .bot1,
-.user *, .bot *, .bot1 * {
-  font-size: 1em !important;
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
-  line-height: 1.27 !important;
-  font-weight: 500 !important;
-  color: #385c6e !important;
-  text-align: left !important;
-}
+    .ul li:last-child,
+   .p:last-child {
+      margin-bottom: 0;
+    }
     .input-container {
       display: flex;
       gap: 10px;
