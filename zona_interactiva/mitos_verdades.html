@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mitos y Verdades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+            --rosa-bebe: #f291b3;
+            --celeste-bebe: #225ece;
+            --blanco-crema: #FFFBFB;
+            --rosa-hover: #FC68A0;
+            --gris-oscuro-texto: #385c6e;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f7;
+            color: #333;
+            margin: 0;
+            padding: 0; 
+        }
+        header {
+            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+            color: white;
+            padding: 28px 18px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px #92b1eb;
+        }
+        header h1 { 
+            margin-bottom: 6px;
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        header p { 
+            font-size: 1.04rem;
+            font-weight: 600;
+            opacity: 0.92;
+            margin: 0;
+            font-style: italic;
+            letter-spacing: .2px;
+        }
+        main {
+            max-width: 1050px;
+            margin: 40px auto 60px;
+            padding: 0 20px;
+        }
+    .section-container {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 28px;
+      margin-bottom: 35px;
+    }
+    .section-content {
+
+      max-width: 130ch;
+      padding-right: 12px;
+
+            background: #fff;
+            border-radius: 18px;
+            padding: 18px 24px 18px 24px;
+            box-shadow: 0 4px 18px #c2185b18;
+            border-left: 6px solid #c2185b;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+    }
+    .section-content.azul {
+      border-left: 6px solid var(--celeste-bebe);
+    }
+    .section-content h2 {
+            font-size: 1.3rem;
+            margin-top: 1;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FF7F50;
+            padding-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    }
+    .section-content.rosado h2 {
+      color: #c2185b;
+    }
+    .section-content.azul h2 {
+      color: var(--celeste-bebe);
+    }
+    .section-content ul,
+    .section-content ol {
+      padding-left: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .section-content li,
+    .section-content p {
+            font-size: 1.00em;
+            line-height: 1.6;
+            color: #385c6e;
+            margin-bottom: 3px;
+            text-align: justify;
+               max-width: 130ch;
+            padding-right: 12px;
+            
+    }
+    .section-content ul li:last-child,
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+    .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-button {
+            padding: 12px 73px;
+            align-self: center;
+            width: auto;
+            min-width: 0;
+            background:#d5dffc;
+            color: #0c3277; 
+            border: none;
+            border-radius: 22px;
+            font-size: 1.06em;
+            font-weight: 720;
+            cursor: pointer;
+            transition: all 0.28s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 1px;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.21);
+            transform: skewX(-20deg);
+            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+            color: #4e0121;
+            transform: translateY(-2.5px) scale(1.03);
+            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+        }
+        .cta-button:active {
+            transform: translateY(0) scale(1);
+            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+        }
+    @media (max-width: 950px) {
+      main { max-width: 99vw; }
+      .section-container { flex-direction: column; gap: 0; }
+      .section-content { border-radius: 15px; padding: 14px 6vw 14px 6vw; }
+    }
+    @media (max-width: 700px) {
+      .section-content { padding: 9px 4vw; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mitos y Verdades sobre el Embarazo</h1>
+  <p>Conoce lo que es real y lo que no durante esta etapa.</p>
+</header>
+
+<main>
+
+  <div class="section-container">
+    <section class="section-content rosado">
+      <h2>🟣 Mito: Comer por dos es necesario</h2>
+      <ul>
+        <li>
+          No necesitas duplicar la cantidad de comida. Lo importante es la calidad de lo que consumes. Comer por dos no significa comer el doble, sino elegir alimentos nutritivos que cubran tus necesidades y las del bebé, sin excesos.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content azul">
+      <h2>💗 Verdad: La alimentación influye directamente en el desarrollo del bebé</h2>
+      <ul>
+        <li>
+          Una dieta equilibrada y variada proporciona los nutrientes necesarios para el crecimiento saludable del bebé. Incluir hierro, ácido fólico, calcio y proteínas es clave para prevenir complicaciones.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content rosado">
+      <h2>🟣 Mito: Si no hay náuseas, algo anda mal</h2>
+      <ul>
+        <li>
+          No todas las mujeres experimentan náuseas en el embarazo, y eso no significa que haya un problema. Cada cuerpo reacciona de forma distinta, y la ausencia de síntomas también es normal.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content azul">
+      <h2>💗 Verdad: El ejercicio moderado es seguro y recomendable</h2>
+      <ul>
+        <li>
+          Actividades como caminar, nadar o hacer yoga prenatal pueden mejorar tu circulación, reducir el estrés y fortalecer tu cuerpo para el parto. Siempre consulta con tu profesional antes de iniciar o continuar cualquier rutina.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content rosado">
+      <h2>🟣 Mito: No se deben tener relaciones sexuales durante el embarazo</h2>
+      <ul>
+        <li>
+          En un embarazo sin complicaciones, tener relaciones sexuales es seguro. Solo en casos específicos el profesional podría sugerir evitarlo. La comunicación con tu pareja y tu médico es fundamental.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content azul">
+      <h2>💗 Verdad: Las emociones de la madre pueden influir en el bebé</h2>
+      <ul>
+        <li>
+          El estrés, la ansiedad y las emociones intensas pueden afectar el desarrollo del bebé a través de cambios hormonales. Por eso, el bienestar emocional es tan importante como el físico durante el embarazo.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content rosado">
+      <h2>🟣 Mito: Si el vientre está en punta, es niño; si está redondo, es niña</h2>
+      <ul>
+        <li>
+          La forma del vientre depende de factores como la posición del bebé, el tono muscular o si es el primer embarazo, pero no tiene relación con el sexo del bebé. Solo una ecografía puede confirmarlo.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content azul">
+      <h2>💗 Verdad: El bebé puede escuchar desde el vientre</h2>
+      <ul>
+        <li>
+          Desde la semana 20, el bebé empieza a percibir sonidos como la voz de la madre, la música o los latidos. Hablarle, cantarle o poner música suave puede favorecer el vínculo emocional.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+    <div class="section-container">
+    <section class="section-content rosado">
+      <h2>🟣 Mito: No se puede teñir el cabello durante el embarazo</h2>
+      <ul>
+        <li>
+          Muchas mujeres creen que teñirse el cabello es peligroso, pero los estudios indican que los tintes modernos contienen niveles bajos de químicos. Si se desea, es recomendable hacerlo después del primer trimestre y en lugares bien ventilados.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-container">
+    <section class="section-content azul">
+      <h2>💗 Verdad: El cuerpo necesita más agua durante el embarazo</h2>
+      <ul>
+        <li>
+          La hidratación es clave para mantener el volumen sanguíneo, formar el líquido amniótico y prevenir el estreñimiento o la fatiga. Se recomienda beber al menos 8 vasos de agua al día, o más si hace calor.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="button-container">
+    <a href="../principal.html" class="cta-button">⬅️ Volver</a>
+  </section>
+</main>
+
+
+</body>
+</html>
