@@ -1,391 +1,487 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Apoyo psicológico | Tercer Trimestre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --rosa-bebe: #f291b3;
-            --celeste-bebe: #225ece;
-            --blanco-crema: #FFFBFB;
-            --rosa-hover: #FC68A0;
-            --gris-oscuro-texto: #385c6e;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f7;
-            color: #333;
-            margin: 0;
-            padding: 0; 
-        }
-        header {
-            background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
-            color: white;
-            padding: 28px 18px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 10px #92b1eb;
-        }
-        header h1 {
-            margin-bottom: 6px;
-            margin-top: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-        header p { 
-            font-size: 1.04rem;
-            font-weight: 600;
-            opacity: 0.92;
-            margin: 0;
-            font-style: italic;
-            letter-spacing: .2px;
-        }
-        main {
-            max-width: 1050px;
-            margin: 40px auto 60px;
-            padding: 0 20px;
-        }
-        .section-container { 
-            display: flex;
-            flex-direction: row-reverse;
-            flex-wrap: wrap;
-            align-items: stretch;
-            gap: 28px;
-            margin-bottom: 35px;
-        }
-        .section-content {
-            flex: 2 1 380px;
-            padding: 18px 24px 18px 24px;
-            border-left: 6px solid #c2185b;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 4px 18px #c2185b18;
-            max-width: 130ch;
-            padding-right: 12px;
-        }
-        .section-image {
-            flex: 1 1 130px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: none;
-            border: none;
-            margin: 0 auto;
-            padding: 0;
-            border-radius: 0;
-            box-shadow: none;
-        }
-        .section-image img {
-            width: 85%; 
-            width: 260px;
-            height: 140px;
-            border-radius: 12px;
-            object-fit: cover;
-            margin-top: 0;
-            margin-bottom: 6px;
-            box-shadow: 0 4px 15px #b416557e; 
-            border: 2px solid #f8cadd;
-            transition: transform 0.22s ease;
-            background: #fff;
-        }
-        .section-image img:hover {
-            transform: scale(1.06);
-        }
-        .section-image .image-caption {
-            text-align: center;
-            font-size: 0.91em;
-            color: #7d3ba3;
-            margin-top: 7px;
-            font-style: italic;
-        } 
-        h2 {
-            color: #c2185b;
-            font-size: 1.3rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #FF7F50;
-            padding-bottom: 8px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-align: left;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        h4 {
-            color: #c2185b;
-            font-size: 1.3rem;
-            margin-bottom: 3px;
-            margin-top: 0;
-            border-bottom: 3px solid #FF7F50;
-            padding-bottom: 6px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-align: left;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .section-content ul, .section-content ol {
-            padding-left: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .section-content li, .section-content p {
-            font-size: 1.00em;
-            line-height: 1.4;
-            color: #385c6e;
-            margin-bottom: 3px;
-            text-align: justify;
-            max-width: 130ch;
-            padding-right: 12px;
-        }
-        .section-content ul li:last-child,
-        .section-content p:last-child {
-            margin-bottom: 0;
-        }
-        .mini-section {
-            background: #fff;
-            border-left: 6px solid #225ece;
-            color: #385c6e;
-            font-size: 1.00em;
-            border-radius: 18px;
-            padding: 18px 24px;
-            margin-top: 8px;
-            box-shadow: 0 4px 18px #225ece18;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 35px;
-        }
-        .mini-section h3 {
-            color: #225ece;
-            font-size: 1.3rem;
-            padding-bottom: 8px;
-            letter-spacing: 0.03em;
-            text-align: left;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            border-bottom: 3px solid #FF7F50;
-        }
-        .mini-section ul, .mini-section ol {
-            padding-left: 20px;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        .mini-section li, .mini-section p {
-            font-size: 1.00em;
-            line-height: 1.4;
-            color: #385c6e;
-            margin-bottom: 3px;
-            text-align: justify;
-            max-width: 130ch;
-            padding-right: 12px;
-        }
-        .mini-section ul li:last-child,
-        .mini-section p:last-child {
-            margin-bottom: 0;
-        }
-        .highlight-info {
-            background: #fae7fd;
-            border-left: 6px solid #c2185b;
-            color: #385c6e;
-            font-size: 1.00em;
-            border-radius: 18px;
-            padding: 18px 24px;
-            margin-bottom: 18px;
-            margin-top: 35px;
-            box-shadow: 0 4px 18px #c2185b18;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .highlight-info-title {
-            color: #c2185b;
-            font-size: 1.3rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #FF7F50;
-            padding-bottom: 8px;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-align: left;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .highlight-info-text {
-            font-size: 1.00em;
-            line-height: 1.5;
-            color: #385c6e;
-            margin-bottom: 3px;
-            text-align: justify;
-            max-width: 130ch;
-            padding-right: 2px;
-        }
-        .highlight-info-text:last-child {
-            margin-bottom: 0;
-        }
-        .button-container {
-            text-align: center;
-            margin-top: 32px;
-        }
-        .cta-button {
-            padding: 12px 73px;
-            align-self: center;
-            width: auto;
-            min-width: 0;
-            background:#d5dffc;
-            color: #0c3277; 
-            border: none;
-            border-radius: 22px;
-            font-size: 1.06em;
-            font-weight: 720;
-            cursor: pointer;
-            transition: all 0.28s;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
-            margin-bottom: 14px;
-        }
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: rgba(255,255,255,0.21);
-            transform: skewX(-20deg);
-            transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
-        }
-        .cta-button:hover::before {
-            left: 100%;
-        }
-        .cta-button:hover {
-            background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
-            color: #4e0121;
-            transform: translateY(-2.5px) scale(1.03);
-            box-shadow: 0 7px 22px rgba(255,127,80,0.29);
-        }
-        .cta-button:active {
-            transform: translateY(0) scale(1);
-            box-shadow: 0 2px 8px rgba(255,127,80,0.14);
-        }
-        @media (max-width: 950px) {
-            main { max-width: 99vw; }
-            .section-container { flex-direction: column; gap: 0; }
-            .section-content, .section-image { border-radius: 15px; }
-            .section-content { padding: 14px 6vw 14px 6vw; }
-            .section-image { max-width: 99vw; min-width: 0; padding-bottom: 0; }
-            .section-image img { margin-top: 12px; }
-        }
-        @media (max-width: 700px) {
-            h2 { font-size: 1.08rem; }
-            .section-content, .mini-section { padding: 9px 4vw; }
-            .section-image img { width: 95%; min-width: 95px; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa-bebe: #f291b3;
+      --celeste-bebe: #225ece;
+      --blanco-crema: #FFFBFB;
+      --rosa-hover: #FC68A0;
+      --gris-oscuro-texto: #385c6e;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f5f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      font-size: 15px;
+    }
+    header {
+      background: linear-gradient(20deg, #225ece 0%, #e03579 100%);
+      color: white;
+      padding: 28px 18px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px #92b1eb;
+    }
+    header h1 {
+      margin-bottom: 6px;
+      margin-top: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.04rem;
+      font-weight: 600;
+      opacity: 0.92;
+      margin: 0;
+      font-style: italic;
+      letter-spacing: .2px;
+    }
+    main {
+      max-width: 850px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+    .chat-box {
+      height: 500px;
+      overflow-y: auto;
+      border: 1.5px solid var(--celeste-bebe);
+      padding: 15px;
+      border-radius: 15px;
+      background: #f1f5ff;
+      margin-bottom: 22px;
+      font-size: 1.00em;
+      color: #385c6e;
+      font-weight: 500;
+    }
+    /* Mensajes del chat */
+    .user, .bot, .bot1 {
+      font-size: 1.00em;
+      line-height: 1.27;
+      font-weight: 500;
+      padding: 7px 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      max-width: 98%;
+      box-sizing: border-box;
+    }
+    .user {
+      text-align: left;
+      color: #0c3277;
+      background: #d5dffc;
+      display: inline-block;
+      min-width: 140px;
+      margin-bottom: 10px;
+      margin-top: 8px;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    .bot {
+      text-align: left;
+      color: #385c6e;
+      margin-left: 5%;
+      word-break: break-word;
+      text-align: justify;
+      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    }
+    .bot1 {
+      color: #225ece;
+      font-style: italic;
+      font-weight: 500;
+      text-align: left;
+    }
+    /* Listas y párrafos igual que el chat, pero letra negra */
+    .ul, ol {
+      padding-left: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  .li, p {
+  font-size: 1.00em;  /* Igual que .user y .bot */
+  line-height: 1.27;
+  font-weight: 500;
+  color: #385c6e;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  max-width: 98%;
+  box-sizing: border-box;
+  padding-right: 12px;
+  text-align: left;
+}
+
+    .ul li:last-child,
+   .p:last-child {
+      margin-bottom: 0;
+    }
+    .input-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 12px 14px;
+      border: 1.5px solid var(--rosa-bebe);
+      border-radius: 15px;
+      font-size: 1.00em;
+      font-weight: 500;
+      outline: none;
+      color: #c2185b;
+      transition: border 0.2s;
+      box-shadow: 0 1px 4px #f291b324;
+    }
+    input[type="text"]:focus {
+      border: 1.5px solid var(--rosa-hover);
+      background: #fff0fa;
+    }
+    button.send-btn {
+      background:#f291b3;
+      color: #000000;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05em;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(194, 24, 91, 0.3);
+      transition: background 0.3s, box-shadow 0.2s, transform 0.2s;
+      user-select: none;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+    }
+    button.send-btn:hover {
+      background:#f291b3;
+      color: #fff;
+      box-shadow: 0 7px 22px rgba(255,127,80,0.22);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta-button {
+      padding: 12px 73px;
+      align-self: center;
+      width: auto;
+      min-width: 0;
+      background:#d5dffc;
+      color: #0c3277;
+      border: none;
+      border-radius: 22px;
+      font-size: 1.06em;
+      font-weight: 720;
+      cursor: pointer;
+      transition: all 0.28s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1px;
+      margin-top: 1px;
+    }
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: rgba(255,255,255,0.21);
+      transform: skewX(-20deg);
+      transition: all 0.7s cubic-bezier(0.165,0.84,0.44,1);
+    }
+    .cta-button:hover::before {
+      left: 100%;
+    }
+    .cta-button:hover {
+      background: linear-gradient(45deg, var(--rosa-hover), var(--rosa-bebe));
+      color: #4e0121;
+      transform: translateY(-2.5px) scale(1.03);
+      box-shadow: 0 7px 22px rgba(255,127,80,0.29);
+    }
+    .cta-button:active {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 2px 8px rgba(255,127,80,0.14);
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 0 5px;
+      }
+      .chat-box {
+        font-size: 0.95em;
+        height: 280px;
+      }
+      .user, .bot, .bot1 {
+        font-size: 0.95em;
+        padding: 6px 8px;
+      }
+      li, p {
+        font-size: 0.95em;
+        padding-right: 6px;
+      }
+      input[type="text"] {
+        font-size: 0.98em;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Apoyo psicológico</h1>
-    <p>Tercer trimestre</p>
-</header>
-
-<main>
-    <!-- INTRODUCCIÓN -->
-    <div class="section-container">
-        <div class="section-image">
-            <img src="../img/img48.png">
-        </div>
-     <section class="section-content">
-    <h4>🧠 ¿Por qué es importante?</h4>
-    <p>
-        El acompañamiento psicológico en esta etapa es importante porque ayuda a manejar el estrés, los miedos y la ansiedad que pueden surgir. Asimismo, mantener la estabilidad emocional favorece el descanso, mejora la toma de decisiones y permite enfrentar el parto y el posparto con mayor claridad y preparación.
-    </p>
-</section>
-
-
-
+  <header>
+    <h1>Chatbot Informativo</h1>
+  </header>
+  <main>
+    <div class="chat-box" id="chatBox">
+      <div class="bot1">🤖 ¡Hola! Soy tu asistente virtual. Pregúntame lo que desees sobre el embarazo: síntomas, etapas, alimentación, cuidados, controles y más.</div>
+      <i><b><center>Por favor, solo consultas sobre embarazo. Otros temas no serán respondidos.</center></b></i>
     </div>
-
-    <!-- SEÑALES DE ALERTA -->
-    <div class="mini-section">
-        <h3>🚨 Señales que indican que necesitas apoyo emocional</h3>
-        <ul>
-            <li>Lloras con frecuencia sin saber bien por qué.</li>
-            <li>Te sientes sola, irritada o con miedo constante.</li>
-            <li>Te cuesta dormir o descansar aunque estés agotada.</li>
-            <li>Sientes que no vas a poder con lo que viene.</li>
-            <li>Te alejas de personas cercanas o te cuesta hablar de lo que sientes.</li>
-        </ul>
-        <p style="margin-top:10px;">
-            Ninguna de estas emociones te hace “mala madre”. Al contrario: pedir ayuda es una forma de protegerte y cuidar al bebé.
-        </p>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Escribe tu pregunta sobre embarazo..." autocomplete="off" />
+      <button class="send-btn" onclick="sendMessage()">➤</button>
     </div>
-
-    <!-- BENEFICIOS DEL APOYO -->
-    <div class="section-container" style="flex-direction: row;">
-        <div class="section-image"> 
-            <img src="../img/img49.png" alt="Terapia en el embarazo">
-        </div>
-        <section class="section-content">
-            <h2>💬 ¿En qué ayuda hablar con una psicóloga perinatal?</h2>
-            <ul>
-                <li>Te ayuda a manejar el miedo al parto y a lo desconocido.</li>
-                <li>Te da herramientas para regular la ansiedad, la culpa o el estrés.</li>
-                <li>Te ayuda a fortalecer tu autoestima y confianza como futura madre.</li>
-                <li>También puede ayudar a tu pareja o familia a acompañarte mejor.</li>
-                <li>Te ayuda a prepararte emocionalmente para el posparto.</li>
-            </ul>
+    <section class="button-container">
+      <a href="../principal.html" class="cta-button">⬅️ Volver</a>
     </section>
-    </div>
-
-    <!-- CONSEJOS PRÁCTICOS -->
-  <div class="mini-section">
-    <h3>🌿 Pequeñas cosas que pueden ayudarte</h3>
-    <ul>
-        <li>Habla con alguien de confianza sobre lo que estás sintiendo, aunque no sepas exactamente por qué.</li>
-        <li>Escribe lo que piensas o te preocupa: vaciar la mente puede ayudarte a ver todo con más claridad.</li>
-        <li>Tómate al menos un momento del día solo para ti: respirar, descansar o desconectarte sin culpa.</li>
-        <li>No te compares con otras embarazadas. Cada cuerpo, cada historia y cada embarazo es distinto.</li>
-        <li>Busca pequeñas pausas de calma, incluso si son solo 10 minutos. </li>
-    </ul>
-    </div>
-
- <div class="highlight-info">
-    <div class="highlight-info-title">🗓️ Sesión de apoyo psicológico disponible</div>
-    <div class="highlight-info-text">
-        <strong>🕐 Fecha:</strong> Viernes 12 de julio de 2025<br>
-        <strong>⏰ Hora:</strong> 2:00 p. m - 4:30 p.m<br>
-        <strong>👩‍⚕️ A cargo:</strong> Lic. Andrea Rojas – Psicóloga perinatal<br>
-        <strong>➡️ Enlace de ingreso:</strong>
-        <a href="https://us05web.zoom.us/j/84003119156?pwd=zhHePtYwuaPmlp3vuo79fUkRyQtAf7.1" target="_blank">zoom.us/j/84003119156</a>
-        <br><small style="font-size: 0.9em; color: #555;">(La atención se brindará en orden de llegada, exclusivamente dentro del horario programado)</small>
-    </div>
-</div>
-
-  <div class="button-container">
-        <a href="../principal.html" class="cta-button">⬅️ Volver</a>
-    </div>
-</main>
-
-
+  </main>
+  <script>
+    const chatBox = document.getElementById('chatBox');
+    const userInput = document.getElementById('userInput');
+const KNOWLEDGE = [
+  {
+    keywords: [/que es/i, /definicion/i, /explica/i, /embarazo/i],
+    answer: `El embarazo es el proceso en el que se desarrolla un bebé dentro del útero de la mujer, desde la fecundación del óvulo hasta el nacimiento. Dura aproximadamente 40 semanas y se divide en tres trimestres, cada uno con diferentes cambios y cuidados importantes. ¿Te gustaría saber sobre etapas, síntomas, alimentación o cuidados?`
+  },
+  {
+    keywords: [/sintoma/i, /signos/i, /como saber/i, /detectar/i, /manifestacion/i, /prueba/i, /test/i, /confirmar/i],
+    answer: `Los síntomas tempranos del embarazo pueden incluir:
+<ul>
+  <li>Ausencia de menstruación</li>
+  <li>Sensibilidad o hinchazón en los senos</li>
+  <li>Náuseas o vómitos (especialmente en la mañana)</li>
+  <li>Cansancio o sueño excesivo</li>
+  <li>Ganas frecuentes de orinar</li>
+  <li>Cambios de humor</li>
+  <li>La forma más confiable de confirmarlo es un test de embarazo en orina o sangre</li>
+</ul>`
+  },
+  {
+    keywords: [/prevencion/i, /prevenir/i, /cuidado/i, /consejo/i, /evitar/i, /recomendacion/i],
+    answer: `Algunos consejos para un embarazo saludable:
+<ul>
+  <li>Acudir a controles médicos prenatales desde el inicio</li>
+  <li>Tomar ácido fólico y vitaminas indicadas</li>
+  <li>Evitar alcohol, tabaco y drogas</li>
+  <li>Alimentarse de forma equilibrada</li>
+  <li>Realizar actividad física suave (caminar, yoga, etc.)</li>
+  <li>Descansar lo suficiente</li>
+  <li>Evitar automedicarse</li>
+</ul>`
+  },
+  {
+    keywords: [/alimento/i, /comida/i, /nutricion/i, /dieta/i, /que comer/i, /alimentacion/i],
+    answer: `La alimentación en el embarazo debe ser variada, rica en frutas, verduras, proteínas magras, cereales integrales y lácteos. Se recomienda:
+<ul>
+  <li>Consumir pescado, huevo, legumbres, carnes magras y semillas</li>
+  <li>Evitar alimentos crudos o poco cocidos (carne, huevo, pescados)</li>
+  <li>Beber suficiente agua</li>
+  <li>Reducir el consumo de azúcares y ultraprocesados</li>
+  <li>Lavar siempre bien frutas y verduras</li>
+</ul>`
+  },
+  {
+    keywords: [/control/i, /consulta/i, /visita/i, /medico/i, /ginecolog/i, /ecografia/i, /analisis/i],
+    answer: `Los controles prenatales permiten monitorear la salud de la madre y el bebé, detectar problemas a tiempo y recibir acompañamiento profesional. Incluyen:
+<ul>
+  <li>Ecografías para seguir el crecimiento</li>
+  <li>Análisis de sangre y orina</li>
+  <li>Medición de peso, presión arterial y altura uterina</li>
+  <li>Consejos sobre alimentación y actividad física</li>
+  <li>Es importante no saltarse las consultas, ¡incluso si te sientes bien!</li>
+</ul>`
+  },
+  {
+    keywords: [/ejercicio/i, /actividad fisica/i, /deporte/i, /caminar/i, /yoga/i],
+    answer: `La actividad física moderada es segura y beneficiosa durante el embarazo (a menos que tu médico indique lo contrario). Ayuda a mejorar el ánimo, el sueño y la circulación, y a prepararte para el parto. Ejemplos:
+<ul>
+  <li>Caminar diariamente</li>
+  <li>Yoga prenatal</li>
+  <li>Natación</li>
+  <li>Estiramientos suaves</li>
+  <li>Evita deportes de contacto o alto impacto.</li>
+</ul>`
+  },
+  {
+    keywords: [/medicina|medicamento|pastilla|remedio|paracetamol|ibuprofeno|farmaco|automedica/i],
+    answer: `Durante el embarazo, evita automedicarte. Solo toma medicamentos recetados por tu profesional de salud, ya que algunos pueden afectar al bebé. Si tienes molestias o síntomas, consulta siempre antes de tomar cualquier pastilla, remedio o suplemento.`
+  },
+  {
+    keywords: [/emocion|miedo|ansiedad|apoyo|psicolog|sentimiento|triste|estres/i],
+    answer: `Durante el embarazo es normal sentir emociones intensas: alegría, miedo, ansiedad, dudas. Si te sientes abrumada:
+<ul>
+  <li>Habla con personas de confianza</li>
+  <li>Busca acompañamiento psicológico si lo necesitas</li>
+  <li>Participa en grupos de apoyo</li>
+  <li>Haz ejercicios de respiración y relajación</li>
+</ul>`
+  },
+  {
+    keywords: [/parto/i, /nacimiento/i, /dolor/i, /contraccion/i, /romper fuente/i, /senales/i, /preparar/i],
+    answer: `Las señales de inicio de parto pueden ser:
+<ul>
+  <li>Contracciones regulares e intensas</li>
+  <li>Pérdida del tapón mucoso</li>
+  <li>Rotura de bolsa (salida de líquido)</li>
+  <li>Dolor lumbar persistente</li>
+  <li>Prepara tu bolso con tiempo y ten a mano los números de emergencia y de tu centro de salud.</li>
+</ul>`
+  },
+  {
+    keywords: [/semana/i, /trimestre/i, /mes/i, /cuanto dura/i, /cuantas semanas/i, /etapa/i],
+    answer: `El embarazo dura aproximadamente 40 semanas (9 meses) y se divide en tres trimestres:
+<ul>
+  <li><b>Primer trimestre</b>: principales cambios hormonales y formación de órganos</li>
+  <li><b>Segundo trimestre</b>: el bebé crece, suelen mejorar las molestias</li>
+  <li><b>Tercer trimestre</b>: mayor crecimiento y preparación para el parto</li>
+</ul>`
+  },
+  {
+    keywords: [/bebe/i, /feto/i, /desarrollo/i, /movimiento/i, /patada/i, /crece/i],
+    answer: `El desarrollo del bebé es continuo:
+<ul>
+  <li>Desde la semana 8 se considera feto</li>
+  <li>Notarás movimientos a partir de la semana 18-22</li>
+  <li>Cada semana, órganos y sentidos se desarrollan más</li>
+  <li>Los controles permiten monitorear su salud y crecimiento</li>
+</ul>`
+  },
+  {
+    keywords: [/complicacion|preeclampsia|diabetes gestacional|sangrado|riesgo/i],
+    answer: `Algunas complicaciones del embarazo pueden requerir atención médica inmediata:
+<ul>
+  <li><b>Preeclampsia:</b> presión alta, hinchazón y proteínas en la orina.</li>
+  <li><b>Diabetes gestacional:</b> niveles altos de azúcar durante el embarazo.</li>
+  <li><b>Infecciones urinarias:</b> frecuentes en el embarazo, deben tratarse para evitar riesgos.</li>
+  <li><b>Sangrado vaginal:</b>Consulta si ocurre, especialmente en el segundo o tercer trimestre.</li>
+</ul>`
+  },
+  {
+    keywords: [/sangrado|flujo|perdida|liquido|tapón mucoso|romper fuente/i],
+    answer: `Durante el embarazo, algunos flujos pueden ser normales, pero otros no. Atención a:
+<ul>
+  <li><b>Sangrado vaginal:</b> puede indicar amenaza de aborto, placenta previa u otras complicaciones.</li>
+  <li><b>Pérdida de líquido transparente:</b> podría ser ruptura de la bolsa (romper fuente).</li>
+  <li><b>Tapón mucoso:</b> secreción espesa y a veces con sangre. Es normal al acercarse el parto.</li>
+</ul>`
+  },
+  {
+    keywords: [/sexo|relacion|intimidad|sexualidad|coito/i],
+    answer: `En general, tener relaciones sexuales durante el embarazo es seguro, salvo que el médico indique lo contrario.
+<ul>
+  <li>Evita si hay sangrados, contracciones, placenta previa o riesgo de parto prematuro.</li>
+  <li>Usa posturas cómodas y suaves, especialmente en el tercer trimestre.</li>
+  <li>La comunicación en pareja es importante para sentirse cómodos y seguros.</li>
+</ul>`
+  },
+  {
+    keywords: [/lactancia|amamantar|dar de mamar|leche materna/i],
+    answer: `La lactancia materna es el alimento ideal para el recién nacido. Beneficios:
+<ul>
+  <li>Proporciona todos los nutrientes que el bebé necesita.</li>
+  <li>Refuerza el sistema inmune.</li>
+  <li>Favorece el vínculo madre-bebé.</li>
+  <li>Ayuda a la recuperación postparto (contracción del útero).</li>
+</ul>`
+  },
+  {
+    keywords: [/vacuna|vacunacion|inmunizacion|tos ferina|influenza|covid/i],
+    answer: `Durante el embarazo, hay vacunas recomendadas para protegerte a ti y al bebé:
+<ul>
+  <li><b>Tétano, difteria y tos ferina (Tdap):</b> entre las semanas 27 y 36.</li>
+  <li><b>Influenza (gripe):</b> en cualquier trimestre.</li>
+  <li><b>COVID-19:</b> si estás en riesgo o no has completado el esquema, consulta con tu médico.</li>
+</ul>`
+  },
+  {
+    keywords: [/trabajo|descanso|licencia|esfuerzo|recomienda trabajar/i],
+    answer: `Si tu embarazo transcurre normalmente, puedes seguir trabajando con algunas recomendaciones:
+<ul>
+  <li>Evita levantar peso o permanecer mucho tiempo de pie o sentada.</li>
+  <li>Haz pausas para caminar o estirar las piernas.</li>
+  <li>Prioriza el descanso y el sueño reparador.</li>
+  <li>En Perú, la licencia por maternidad dura 98 días: 49 antes y 49 después del parto.</li>
+</ul>`
+  },
+  {
+    keywords: [/hola|saludo|buenas/i],
+    answer: `¡Hola! ¿En qué puedo ayudarte sobre embarazo, cuidados, síntomas o alimentación?`
+  },
+  {
+    keywords: [/gracias|agradecid/i],
+    answer: `¡De nada! Si tienes otra pregunta sobre embarazo, aquí estoy para ti.`
+  },
+  {
+    keywords: [/adios|chau|hasta luego|nos vemos/i],
+    answer: `¡Hasta luego! Recuerda que puedes volver cuando lo necesites. Tu bienestar es lo más importante.`
+  }
+];
+const OUT_OF_SCOPE = [
+  /cancer|mama|seno|inteligencia artificial|tecnolog|politic|futbol|clima|presidente|perro|gato|musica|pais|historia|matematic|gpt|openai|modelo|red neuronal|quimica|covid|influenza|diabetes|corazon|riñon|pulmon|computadora|celular|telefono|juego|pelicula|actor|artista|viaje|vacacion|universidad|trabajo|dinero|criptomoneda|bitcoin|cocina|receta/i
+];
+    function appendMessage(message, sender) {
+      const div = document.createElement('div');
+      div.className = sender;
+      div.innerHTML = message.replace(/\n/g, "<br>");
+      chatBox.appendChild(div);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+    function sendMessage() {
+      let text = userInput.value.trim();
+      if (text === "") return;
+      appendMessage(text, 'user');
+      userInput.value = "";
+      userInput.disabled = true;
+      setTimeout(() => {
+        const response = getBotResponse(text);
+        appendMessage(response, 'bot');
+        userInput.disabled = false;
+        userInput.focus();
+      }, 900);
+    }
+    function getBotResponse(input) {
+      // Primero, si detecta palabras fuera de tema, rechaza la pregunta
+      for (let out of OUT_OF_SCOPE) {
+        if (out.test(input)) {
+          return `Lo siento, solo puedo responder preguntas sobre <b>embarazo</b>.<br>
+          ¿Tienes dudas sobre síntomas, etapas, alimentación, controles u otros aspectos de esta etapa? ¡Estoy aquí para ayudarte!`;
+        }
+      }
+      // Busca respuesta adecuada en la base de conocimiento
+      for (let item of KNOWLEDGE) {
+        for (let k of item.keywords) {
+          if (k.test(input)) {
+            return item.answer;
+          }
+        }
+      }
+      // Si no encuentra respuesta, intenta ser humana
+      return `No tengo información precisa sobre esa consulta. Puedo ayudarte con preguntas sobre:
+      <p>• Síntomas<br>
+      • Etapas y semanas<br>
+      • Alimentación<br>
+      • Controles médicos<br>
+      • Preparación para el parto, entre otros.</i>`;
+    }
+    userInput.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+        sendMessage();
+      }
+    });
+  </script>
 </body>
 </html>
